@@ -4,7 +4,10 @@ export function formatScores(scores: string): string {
     red: 0,
     green: 0,
   };
-  const scoreArr = scores.split(", ");
+  const scoreArr = scores
+    .toLowerCase()
+    .split(",")
+    .map((score) => score.trim());
 
   if (!scoreArr.every((score) => score in colours)) {
     return "Check for any typo";

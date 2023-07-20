@@ -48,6 +48,16 @@ describe("#formatScores", () => {
       input: "red, purple, green",
       output: "Check for any typo",
     },
+    {
+      desc: "should take any type casing",
+      input: "Red, gReeN, aMBer, rED, reD",
+      output: "amber: 1\nred: 3\ngreen: 1",
+    },
+    {
+      desc: "correctly handles variable white space",
+      input: " red,  green , amber,red",
+      output: "amber: 1\nred: 2\ngreen: 1",
+    },
   ];
 
   cases.forEach((testCase) => {
