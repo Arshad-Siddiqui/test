@@ -28,6 +28,11 @@ describe("#formatScores", () => {
       input: "asdlfjas;dfjlsakdfj",
       output: "",
     },
+    {
+      desc: "can handle 2 reds",
+      input: "red, red",
+      output: "red: 2",
+    },
   ];
 
   cases.forEach((testCase) => {
