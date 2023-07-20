@@ -16,5 +16,5 @@ export function formatScores(scores: string): string {
   return entries
     .filter((entry) => entry[1] != 0)
     .map((entry) => `${entry[0]}: ${entry[1]}`)
-    .join("");
+    .join("\n");
 }

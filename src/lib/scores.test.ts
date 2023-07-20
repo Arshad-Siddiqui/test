@@ -33,6 +33,11 @@ describe("#formatScores", () => {
       input: "red, red",
       output: "red: 2",
     },
+    {
+      desc: "Can handle 2 different colours",
+      input: "red, green",
+      output: "red: 1\ngreen: 1",
+    },
   ];
 
   cases.forEach((testCase) => {
