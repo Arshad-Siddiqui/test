@@ -1,23 +1,20 @@
 export function formatScores(scores: string): string {
+  // Example of scores: "red, green, amber, red"
   const scoreArr = scores.split(", ");
-  const colours = {
+  const colours: { [key: string]: number } = {
     amber: 0,
     red: 0,
     green: 0,
   };
 
+  const colourArr = Object.keys(colours);
   scoreArr.forEach((score) => {
-    if (score == "amber") {
-      colours.amber++;
-    }
-
-    if (score == "red") {
-      colours.red++;
-    }
-
-    if (score == "green") {
-      colours.green++;
-    }
+    colourArr.forEach((colour) => {
+      // Fix the variable name here
+      if (score === colour) {
+        colours[colour]++;
+      }
+    });
   });
   const entries = Object.entries(colours);
   console.log(entries);
