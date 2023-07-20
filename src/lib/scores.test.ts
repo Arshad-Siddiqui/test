@@ -18,6 +18,11 @@ describe("#formatScores", () => {
       input: "green",
       output: "green: 1",
     },
+    {
+      desc: "rejects wrong colours",
+      input: "purple",
+      output: "",
+    },
   ];
 
   cases.forEach((testCase) => {

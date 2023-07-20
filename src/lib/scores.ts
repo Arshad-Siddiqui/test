@@ -6,5 +6,10 @@ export function formatScores(scores: string): string {
   if (scores == "green") {
     return "green: 1";
   }
-  return "red: 1";
+
+  if (scores == "red") {
+    return "red: 1";
+  }
+
+  return "";
 }
