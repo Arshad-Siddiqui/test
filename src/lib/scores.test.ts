@@ -21,12 +21,12 @@ describe("#formatScores", () => {
     {
       desc: "rejects wrong colours",
       input: "purple",
-      output: "",
+      output: "Check for any typo",
     },
     {
       desc: "rejects completely wrong strings",
       input: "asdlfjas;dfjlsakdfj",
-      output: "",
+      output: "Check for any typo",
     },
     {
       desc: "can handle 2 reds",
@@ -42,6 +42,11 @@ describe("#formatScores", () => {
       desc: "can handle a range of different colours",
       input: "red, green, red, green, amber, amber, amber, green, amber",
       output: "amber: 4\nred: 2\ngreen: 3",
+    },
+    {
+      desc: "can handle correct and incorrect values",
+      input: "red, purple, green",
+      output: "Check for any typo",
     },
   ];
 

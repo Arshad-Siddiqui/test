@@ -1,10 +1,14 @@
 export function formatScores(scores: string): string {
-  const scoreArr = scores.split(", ");
   const colours: { [key: string]: number } = {
     amber: 0,
     red: 0,
     green: 0,
   };
+  const scoreArr = scores.split(", ");
+
+  if (!scoreArr.every((score) => score in colours)) {
+    return "Check for any typo";
+  }
 
   scoreArr.forEach((score) => {
     if (score in colours) {
