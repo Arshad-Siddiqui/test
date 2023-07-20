@@ -6,13 +6,10 @@ export function formatScores(scores: string): string {
     green: 0,
   };
 
-  const colourArr = Object.keys(colours);
   scoreArr.forEach((score) => {
-    colourArr.forEach((colour) => {
-      if (score === colour) {
-        colours[colour]++;
-      }
-    });
+    if (score in colours) {
+      colours[score]++;
+    }
   });
   const entries = Object.entries(colours);
 
