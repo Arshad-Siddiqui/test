@@ -1,15 +1,9 @@
 export function formatScores(scores: string): string {
-  if (scores == "amber") {
-    return "amber: 1";
+  const colours = ["amber", "green", "red"];
+  for (let i = 0; i < colours.length; i++) {
+    if (scores == colours[i]) {
+      return `${colours[i]}: 1`;
+    }
   }
-
-  if (scores == "green") {
-    return "green: 1";
-  }
-
-  if (scores == "red") {
-    return "red: 1";
-  }
-
   return "";
 }
