@@ -23,6 +23,11 @@ describe("#formatScores", () => {
       input: "purple",
       output: "",
     },
+    {
+      desc: "rejects completely wrong strings",
+      input: "asdlfjas;dfjlsakdfj",
+      output: "",
+    },
   ];
 
   cases.forEach((testCase) => {
