@@ -34,9 +34,14 @@ describe("#formatScores", () => {
       output: "red: 2",
     },
     {
-      desc: "Can handle 2 different colours",
+      desc: "can handle 2 different colours",
       input: "red, green",
       output: "red: 1\ngreen: 1",
+    },
+    {
+      desc: "can handle a range of different colours",
+      input: "red, green, red, green, amber, amber, amber, green, amber",
+      output: "amber: 4\nred: 2\ngreen: 3",
     },
   ];
 
