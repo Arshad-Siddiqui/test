@@ -6,12 +6,17 @@ describe("#formatScores", () => {
     {
       desc: "returns 1 red",
       input: "red",
-      output: "red: 1\n",
+      output: "red: 1",
     },
     {
       desc: "returns 1 amber",
       input: "amber",
-      output: "amber: 1\n",
+      output: "amber: 1",
+    },
+    {
+      desc: "returns 1 green",
+      input: "green",
+      output: "green: 1",
     },
   ];
 

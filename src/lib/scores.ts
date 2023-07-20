@@ -1,7 +1,10 @@
 export function formatScores(scores: string): string {
   if (scores == "amber") {
-    return "amber: 1\n";
+    return "amber: 1";
   }
 
-  return "red: 1\n";
+  if (scores == "green") {
+    return "green: 1";
+  }
+  return "red: 1";
 }
