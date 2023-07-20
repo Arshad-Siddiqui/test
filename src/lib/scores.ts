@@ -1,5 +1,4 @@
 export function formatScores(scores: string): string {
-  // Example of scores: "red, green, amber, red"
   const scoreArr = scores.split(", ");
   const colours: { [key: string]: number } = {
     amber: 0,
@@ -10,19 +9,15 @@ export function formatScores(scores: string): string {
   const colourArr = Object.keys(colours);
   scoreArr.forEach((score) => {
     colourArr.forEach((colour) => {
-      // Fix the variable name here
       if (score === colour) {
         colours[colour]++;
       }
     });
   });
   const entries = Object.entries(colours);
-  console.log(entries);
-  const filteredEntries = entries.filter((entry) => entry[1] != 0);
 
-  console.log(filteredEntries);
-
-  return filteredEntries.reduce((accumulator: string, current) => {
-    return accumulator + `${current[0]}: ${current[1]}`;
-  }, "");
+  return entries
+    .filter((entry) => entry[1] != 0)
+    .map((entry) => `${entry[0]}: ${entry[1]}`)
+    .join("");
 }
