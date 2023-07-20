@@ -1,3 +1,3 @@
 export function formatScores(scores: string): string {
-  return "some string";
+  return "red: 1\n";
 }

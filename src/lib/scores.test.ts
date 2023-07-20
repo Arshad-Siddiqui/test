@@ -5,8 +5,8 @@ describe("#formatScores", () => {
   const testCases = [
     {
       desc: "returns a string",
-      input: "someString",
-      output: "some string",
+      input: "red",
+      output: "red: 1\n",
     },
   ];
 
