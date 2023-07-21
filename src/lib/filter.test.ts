@@ -23,11 +23,18 @@ describe("#filter", () => {
       input: [1001, 1000054, 50],
       output: [1000, 1000, 50],
     },
+    {
+      desc: "takes optional limits",
+      input: [25, 80],
+      min: 30,
+      max: 70,
+      output: [30, 70],
+    },
   ];
 
-  testCases.forEach(({ desc, input, output }) => {
+  testCases.forEach(({ desc, input, output, min, max }) => {
     test(desc, () => {
-      expect(filter(input)).toEqual(output);
+      expect(filter(input, min, max)).toEqual(output);
     });
   });
 });
