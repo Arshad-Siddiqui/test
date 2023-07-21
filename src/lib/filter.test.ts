@@ -18,6 +18,11 @@ describe("#filter", () => {
       input: [20],
       output: [40],
     },
+    {
+      desc: "lowers a value above 1000 to 1000",
+      input: [1001, 1000054, 50],
+      output: [1000, 1000, 50],
+    },
   ];
 
   testCases.forEach((testCase) => {
