@@ -25,9 +25,9 @@ describe("#filter", () => {
     },
   ];
 
-  testCases.forEach((testCase) => {
-    test(testCase.desc, () => {
-      expect(filter(testCase.input)).toEqual(testCase.output);
+  testCases.forEach(({ desc, input, output }) => {
+    test(desc, () => {
+      expect(filter(input)).toEqual(output);
     });
   });
 });
