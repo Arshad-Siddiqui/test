@@ -26,15 +26,14 @@ describe("#filter", () => {
     {
       desc: "takes optional limits",
       input: [25, 80],
-      min: 30,
-      max: 70,
+      range: { min: 30, max: 70 },
       output: [30, 70],
     },
   ];
 
-  testCases.forEach(({ desc, input, output, min, max }) => {
+  testCases.forEach(({ desc, input, output, range }) => {
     test(desc, () => {
-      expect(filter(input, min, max)).toEqual(output);
+      expect(filter(input, range)).toEqual(output);
     });
   });
 });

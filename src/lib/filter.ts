@@ -1,7 +1,6 @@
 export function filter(
   frequencies: number[],
-  min: number = 40,
-  max: number = 1000
+  { min, max }: { min: number; max: number } = { min: 40, max: 1000 }
 ): number[] {
   return frequencies.map((frequency) => {
     if (frequency > max) {
