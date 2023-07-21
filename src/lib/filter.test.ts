@@ -13,6 +13,11 @@ describe("#filter", () => {
       input: [88, 567, 342, 60, 999, 40],
       output: [88, 567, 342, 60, 999, 40],
     },
+    {
+      desc: "raises a value below 40 to 40",
+      input: [20],
+      output: [40],
+    },
   ];
 
   testCases.forEach((testCase) => {
