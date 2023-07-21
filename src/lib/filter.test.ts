@@ -8,6 +8,11 @@ describe("#filter", () => {
       input: [45],
       output: [45],
     },
+    {
+      desc: "can handle multiple values in range",
+      input: [88, 567, 342, 60, 999, 40],
+      output: [88, 567, 342, 60, 999, 40],
+    },
   ];
 
   testCases.forEach((testCase) => {
