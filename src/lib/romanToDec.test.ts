@@ -2,7 +2,7 @@ import romanToDecimal from "./romanToDec";
 import { describe, test, expect } from "vitest";
 
 describe("#romanToDecimal", () => {
-  const simpleTestCases: Array<[string, number]> = [
+  const simpleTestCases: TestCases = [
     ["I", 1],
     ["V", 5],
     ["X", 10],
@@ -12,16 +12,24 @@ describe("#romanToDecimal", () => {
     ["M", 1000],
   ];
 
-  const complexTestCases: Array<[string, number]> = [
+  const complexTestCases: TestCases = [
     ["II", 2],
     ["III", 3],
     // ["IV", 4],
     ["VI", 6],
+    ["VII", 7],
+    ["VIII", 8],
+    ["XIII", 13],
+    ["XV", 15],
+    ["XVII", 17],
+    ["MMXXIII", 2023],
   ];
 
-  const testCases = [...simpleTestCases, ...complexTestCases];
+  const testCases: TestCases = [...simpleTestCases, ...complexTestCases];
 
   test.each(testCases)("converts %s to %i", (input, output) => {
     expect(romanToDecimal(input)).toEqual(output);
   });
 });
+
+type TestCases = Array<[string, number]>;
