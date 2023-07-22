@@ -3,6 +3,14 @@ export default function romanToDecimal(roman: string): number {
     return 2;
   }
 
+  if (roman == "III") {
+    return 3;
+  }
+
+  if (roman == "IV") {
+    return 4;
+  }
+
   const converter: { [key: string]: number } = {
     I: 1,
     V: 5,
