@@ -23,6 +23,21 @@ describe("#romanToDecimal", () => {
       input: "L",
       output: 50,
     },
+    {
+      desc: "can convert 'C' to 100",
+      input: "C",
+      output: 100,
+    },
+    {
+      desc: "can convert 'D' to 500",
+      input: "D",
+      output: 500,
+    },
+    {
+      desc: "can convert 'M' to 1000",
+      input: "M",
+      output: 1000,
+    },
   ];
 
   testCases.forEach(({ desc, input, output }) => {
