@@ -8,6 +8,11 @@ describe("#romanToDecimal", () => {
       input: "I",
       output: 1,
     },
+    {
+      desc: "can convert 'V' to 5",
+      input: "V",
+      output: 5,
+    },
   ];
 
   testCases.forEach(({ desc, input, output }) => {
