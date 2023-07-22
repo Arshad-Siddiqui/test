@@ -25,7 +25,10 @@ describe("#romanToDecimal", () => {
     ["MMXXIII", 2023],
   ];
 
-  const subtractionTestCases: TestCases = [["IV", 4]];
+  const subtractionTestCases: TestCases = [
+    ["IV", 4],
+    ["IX", 9],
+  ];
 
   const testCases: TestCases = [
     ...simpleTestCases,

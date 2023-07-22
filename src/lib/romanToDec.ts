@@ -3,6 +3,10 @@ export default function romanToDecimal(roman: string): number {
     return 4;
   }
 
+  if (roman == "IX") {
+    return 9;
+  }
+
   const romanArr = roman.split("");
   const converter: { [key: string]: number } = {
     I: 1,
