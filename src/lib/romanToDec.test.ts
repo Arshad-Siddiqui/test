@@ -12,7 +12,11 @@ describe("#romanToDecimal", () => {
     ["M", 1000],
   ];
 
-  test.each(simpleTestCases)("converts %s to %i", (input, output) => {
+  const complexTestCases: Array<[string, number]> = [["II", 2]];
+
+  const testCases = [...simpleTestCases, ...complexTestCases];
+
+  test.each(testCases)("converts %s to %i", (input, output) => {
     expect(romanToDecimal(input)).toEqual(output);
   });
 });
