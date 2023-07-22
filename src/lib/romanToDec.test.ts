@@ -18,6 +18,11 @@ describe("#romanToDecimal", () => {
       input: "X",
       output: 10,
     },
+    {
+      desc: "can convert 'L' to 50",
+      input: "L",
+      output: 50,
+    },
   ];
 
   testCases.forEach(({ desc, input, output }) => {
