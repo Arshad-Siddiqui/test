@@ -1,5 +1,5 @@
 import romanToDecimal from "./romanToDec";
-import { describe, test, expect } from "vitest";
+import { describe, test, expect, Test } from "vitest";
 
 describe("#romanToDecimal", () => {
   const simpleTestCases: TestCases = [
@@ -25,7 +25,13 @@ describe("#romanToDecimal", () => {
     ["MMXXIII", 2023],
   ];
 
-  const testCases: TestCases = [...simpleTestCases, ...complexTestCases];
+  const subtractionTestCases: TestCases = [["IV", 4]];
+
+  const testCases: TestCases = [
+    ...simpleTestCases,
+    ...complexTestCases,
+    ...subtractionTestCases,
+  ];
 
   test.each(testCases)("converts %s to %i", (input, output) => {
     expect(romanToDecimal(input)).toEqual(output);

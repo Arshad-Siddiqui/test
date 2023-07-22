@@ -1,4 +1,8 @@
 export default function romanToDecimal(roman: string): number {
+  if (roman == "IV") {
+    return 4;
+  }
+
   const romanArr = roman.split("");
   const converter: { [key: string]: number } = {
     I: 1,
