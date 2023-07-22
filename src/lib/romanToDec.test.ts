@@ -16,6 +16,7 @@ describe("#romanToDecimal", () => {
     ["II", 2],
     ["III", 3],
     // ["IV", 4],
+    ["VI", 6],
   ];
 
   const testCases = [...simpleTestCases, ...complexTestCases];
