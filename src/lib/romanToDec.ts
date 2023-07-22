@@ -1,16 +1,5 @@
 export default function romanToDecimal(roman: string): number {
-  if (roman == "II") {
-    return 2;
-  }
-
-  if (roman == "III") {
-    return 3;
-  }
-
-  if (roman == "IV") {
-    return 4;
-  }
-
+  const romanArr = roman.split("");
   const converter: { [key: string]: number } = {
     I: 1,
     V: 5,
@@ -21,5 +10,7 @@ export default function romanToDecimal(roman: string): number {
     M: 1000,
   };
 
-  return converter[roman];
+  return romanArr.reduce((accumulator, current) => {
+    return accumulator + converter[current];
+  }, 0);
 }
