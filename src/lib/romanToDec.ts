@@ -18,7 +18,21 @@ export default function romanToDecimal(roman: string): number {
     M: 1000,
   };
 
-  return romanArr.reduce((accumulator, current) => {
-    return accumulator + converter[current];
+  const additions = romanArr.reduce((accumulator, current) => {
+    const currentNumber = converter[current];
+
+    return accumulator + currentNumber;
   }, 0);
+
+  const numberArr = romanArr.map((value) => {
+    return converter[value];
+  });
+
+  const smallestValue = Math.min(...numberArr);
+  const lastValue = numberArr[numberArr.length - 1];
+
+  if (lastValue > smallestValue) {
+    return additions - 2;
+  }
+  return additions;
 }
