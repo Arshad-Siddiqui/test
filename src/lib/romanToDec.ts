@@ -1,13 +1,4 @@
-export default function romanToDecimal(roman: string): number {
-  if (roman == "IV") {
-    return 4;
-  }
-
-  if (roman == "IX") {
-    return 9;
-  }
-
-  const romanArr = roman.split("");
+export default function romanToDecimal(romanStr: string): number {
   const converter: { [key: string]: number } = {
     I: 1,
     V: 5,
@@ -18,21 +9,18 @@ export default function romanToDecimal(roman: string): number {
     M: 1000,
   };
 
-  const additions = romanArr.reduce((accumulator, current) => {
-    const currentNumber = converter[current];
-
-    return accumulator + currentNumber;
-  }, 0);
+  const romanArr = romanStr.split("");
 
   const numberArr = romanArr.map((value) => {
     return converter[value];
   });
 
+  const additions = numberArr.reduce((accumulator, current) => {
+    return accumulator + current;
+  }, 0);
+
   const smallestValue = Math.min(...numberArr);
   const lastValue = numberArr[numberArr.length - 1];
 
-  if (lastValue > smallestValue) {
-    return additions - 2;
-  }
-  return additions;
+  return lastValue > smallestValue ? additions - 2 : additions;
 }
