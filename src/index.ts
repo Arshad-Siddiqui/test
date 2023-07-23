@@ -1,4 +1,3 @@
-import { formatScores } from "./lib/scores";
+import romanToDecimal from "./lib/romanToDec";
 
-const formattedScores = formatScores("banana");
-console.log(formattedScores);
+console.log(romanToDecimal("XCIX"));

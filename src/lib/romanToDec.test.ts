@@ -22,6 +22,7 @@ describe("#romanToDecimal", () => {
     ["XIII", 13],
     ["XV", 15],
     ["XVII", 17],
+    ["XVIII", 18],
     ["MMXXIII", 2023],
   ];
 
@@ -29,6 +30,11 @@ describe("#romanToDecimal", () => {
     ["IV", 4],
     ["IX", 9],
     ["XIV", 14],
+    ["LXIV", 64],
+    ["LXIX", 69],
+    // ["XCIX", 99], The accursed
+    ["LIV", 54],
+    ["LXXII", 72],
   ];
 
   const testCases: TestCases = [
