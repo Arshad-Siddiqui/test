@@ -9,13 +9,11 @@ export default function romanToDecimal(romanStr: string): number {
     M: 1000,
   };
 
-  const romanArr = romanStr.split("");
-  const numberArr = romanArr.map((value) => {
+  const numberArr = romanStr.split("").map((value) => {
     return converter[value];
   });
 
   let lastValue = numberArr[0];
-
   return numberArr.reduce((accumulator, current) => {
     const addition = lastValue < current ? current - lastValue * 2 : current;
     lastValue = current;
