@@ -17,12 +17,8 @@ export default function romanToDecimal(romanStr: string): number {
   let lastValue = numberArr[0];
 
   return numberArr.reduce((accumulator, current) => {
-    if (lastValue < current) {
-      const addition = current - lastValue * 2;
-      lastValue = current;
-      return accumulator + addition;
-    }
+    const addition = lastValue < current ? current - lastValue * 2 : current;
     lastValue = current;
-    return accumulator + current;
+    return accumulator + addition;
   }, 0);
 }
