@@ -14,11 +14,15 @@ export default function romanToDecimal(romanStr: string): number {
     return converter[value];
   });
 
-  const additions = numberArr.reduce((accumulator, current) => {
+  let lastValue = numberArr[0];
+
+  return numberArr.reduce((accumulator, current) => {
+    if (lastValue < current) {
+      const addition = current - lastValue * 2;
+      lastValue = current;
+      return accumulator + addition;
+    }
+    lastValue = current;
     return accumulator + current;
   }, 0);
-
-  const smallestValue = Math.min(...numberArr);
-  const lastValue = numberArr[numberArr.length - 1];
-  return lastValue > smallestValue ? additions - 2 : additions;
 }
