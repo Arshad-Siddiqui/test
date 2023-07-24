@@ -15,7 +15,7 @@ describe("#romanToDecimal", () => {
   const complexTestCases: TestCases = [
     ["II", 2],
     ["III", 3],
-    // ["IV", 4],
+    ["IV", 4],
     ["VI", 6],
     ["VII", 7],
     ["VIII", 8],
@@ -32,7 +32,7 @@ describe("#romanToDecimal", () => {
     ["XIV", 14],
     ["LXIV", 64],
     ["LXIX", 69],
-    // ["XCIX", 99], The accursed
+    ["XCIX", 99],
     ["LIV", 54],
     ["LXXII", 72],
   ];
