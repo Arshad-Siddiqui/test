@@ -3,6 +3,9 @@ import { describe, test, expect } from "vitest";
 
 describe("#fizzbuzz", () => {
   const tests: Array<[number, number | string]> = [
+    [-3, "fizz"],
+    [-2, -2],
+    [-5, "buzz"],
     [0, 0],
     [1, 1],
     [2, 2],
