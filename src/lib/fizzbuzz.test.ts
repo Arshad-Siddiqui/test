@@ -22,6 +22,10 @@ describe("#fizzbuzz", () => {
     [13, 13],
     [14, 14],
     [15, "fizzbuzz"],
+    [99, "fizz"],
+    [100, "buzz"],
+    [300, "fizzbuzz"],
+    [100_000, "buzz"],
   ];
 
   test.each(tests)("%i -> %s", (input, output) => {
