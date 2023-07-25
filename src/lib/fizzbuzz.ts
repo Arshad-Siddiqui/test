@@ -3,6 +3,10 @@ export default function fizzbuzz(number: number): number | string {
     return 0;
   }
 
+  if (number % 3 == 0 && number % 5 == 0) {
+    return "fizzbuzz";
+  }
+
   if (number % 3 == 0) {
     return "fizz";
   }
