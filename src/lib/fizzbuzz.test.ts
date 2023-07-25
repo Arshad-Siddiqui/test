@@ -6,7 +6,8 @@ describe("#fizzbuzz", () => {
     [0, 0],
     [1, 1],
     [2, 2],
-    [3, "buzz"],
+    [3, "fizz"],
+    [4, 4],
   ];
 
   test.each(tests)("%i -> %s", (input, output) => {
