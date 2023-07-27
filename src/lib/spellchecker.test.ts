@@ -1,5 +1,5 @@
 import { test, describe, expect } from "vitest";
-import { spellchecker } from "./spellchecker";
+import { sentenceSpellchecker, spellchecker } from "./spellchecker";
 
 describe("#spellchecker", () => {
   const testCases = [
@@ -16,5 +16,13 @@ describe("#spellchecker", () => {
 
   test.each(testCases)("%s -> %s", (input, output) => {
     expect(spellchecker(input)).toEqual(output);
+  });
+});
+
+describe("#sentenceSpellchecker", () => {
+  const testCases = [["hello world", "hello world"]];
+
+  test.each(testCases)("%s -> %s", (input, output) => {
+    expect(sentenceSpellchecker(input)).toEqual(output);
   });
 });

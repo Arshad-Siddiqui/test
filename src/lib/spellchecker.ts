@@ -28,3 +28,7 @@ export function spellchecker(word: string): string {
     ? word
     : "~" + word + "~";
 }
+
+export function sentenceSpellchecker(sentence: string): string {
+  return sentence;
+}
