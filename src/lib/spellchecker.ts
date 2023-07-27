@@ -15,16 +15,18 @@ output: string
 */
 
 export function spellchecker(word: string): string {
-  if (word == "wrds") {
-    return "~wrds~";
-  }
+  const correctlySpeltWords = [
+    "words",
+    "word",
+    "banana",
+    "apple",
+    "computer",
+    "watch",
+  ];
 
-  if (word == "banaa") {
-    return "~banaa~";
+  if (correctlySpeltWords.some((element) => element == word)) {
+    return word;
+  } else {
+    return "~" + word + "~";
   }
-
-  if (word == "anana") {
-    return "~anana~";
-  }
-  return word;
 }
