@@ -20,7 +20,11 @@ describe("#spellchecker", () => {
 });
 
 describe("#sentenceSpellchecker", () => {
-  const testCases = [["hello world", "hello world"]];
+  const testCases = [
+    ["hello world", "hello world"],
+    ["computer apple banana", "computer apple banana"],
+    ["computer aple banana", "computer ~aple~ banana"],
+  ];
 
   test.each(testCases)("%s -> %s", (input, output) => {
     expect(sentenceSpellchecker(input)).toEqual(output);

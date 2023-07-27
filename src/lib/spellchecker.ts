@@ -22,6 +22,8 @@ export function spellchecker(word: string): string {
     "apple",
     "computer",
     "watch",
+    "hello",
+    "world",
   ];
 
   return correctlySpeltWords.some((element) => element == word)
@@ -30,5 +32,7 @@ export function spellchecker(word: string): string {
 }
 
 export function sentenceSpellchecker(sentence: string): string {
-  return sentence;
+  const words = sentence.split(" ");
+  const spellcheckedWords = words.map((word) => spellchecker(word));
+  return spellcheckedWords.join(" ");
 }
