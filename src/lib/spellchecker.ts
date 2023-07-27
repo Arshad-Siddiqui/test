@@ -18,5 +18,9 @@ export function spellchecker(word: string): string {
   if (word == "wrds") {
     return "~wrds~";
   }
+
+  if (word == "word") {
+    return word;
+  }
   return "words";
 }
