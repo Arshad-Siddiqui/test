@@ -6,8 +6,11 @@ describe("#spellchecker", () => {
     ["words", "words"],
     ["wrds", "~wrds~"],
     ["word", "word"],
-    // ["banana", "banana"],
-    // ["apple", "apple"],
+    ["banana", "banana"],
+    ["banaa", "~banaa~"],
+    ["apple", "apple"],
+    ["computer", "computer"],
+    ["watch", "watch"],
   ];
 
   test.each(testCases)("%s -> %s", (input, output) => {
