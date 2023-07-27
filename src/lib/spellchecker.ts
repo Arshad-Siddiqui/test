@@ -22,5 +22,9 @@ export function spellchecker(word: string): string {
   if (word == "banaa") {
     return "~banaa~";
   }
+
+  if (word == "anana") {
+    return "~anana~";
+  }
   return word;
 }

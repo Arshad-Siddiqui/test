@@ -8,6 +8,7 @@ describe("#spellchecker", () => {
     ["word", "word"],
     ["banana", "banana"],
     ["banaa", "~banaa~"],
+    ["anana", "~anana~"],
     ["apple", "apple"],
     ["computer", "computer"],
     ["watch", "watch"],
