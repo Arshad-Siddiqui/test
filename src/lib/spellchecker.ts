@@ -24,9 +24,7 @@ export function spellchecker(word: string): string {
     "watch",
   ];
 
-  if (correctlySpeltWords.some((element) => element == word)) {
-    return word;
-  } else {
-    return "~" + word + "~";
-  }
+  return correctlySpeltWords.some((element) => element == word)
+    ? word
+    : "~" + word + "~";
 }
