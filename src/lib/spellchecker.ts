@@ -32,7 +32,8 @@ export function spellchecker(word: string): string {
 }
 
 export function sentenceSpellchecker(sentence: string): string {
-  const words = sentence.split(" ");
-  const spellcheckedWords = words.map((word) => spellchecker(word));
-  return spellcheckedWords.join(" ");
+  return sentence
+    .split(" ")
+    .map((word) => spellchecker(word))
+    .join(" ");
 }
