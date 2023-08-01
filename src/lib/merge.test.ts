@@ -2,10 +2,7 @@ import { describe, test, expect } from "vitest";
 import { merge } from "./merge";
 
 describe("#merge", () => {
-  const testCases: TestCases = [
-    [[1], 1, [1], 1, [1, 1]],
-    [[1], 1, [1], 1, [1, 1]],
-  ];
+  const testCases: TestCases = [[[1, 0], 1, [1], 1, [1, 1]]];
 
   test.each(testCases)(
     "%s %s %s %s -> %s",
