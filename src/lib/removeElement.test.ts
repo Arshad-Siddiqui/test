@@ -2,7 +2,10 @@ import { describe, test, expect, Test } from "vitest";
 import { removeElement } from "./removeElement";
 
 describe("#removeElement", () => {
-  const testCases: TestCase[] = [[[1], 1, [], 0]];
+  const testCases: TestCase[] = [
+    [[1], 1, [], 0],
+    [[1], 2, [1], 1],
+  ];
 
   test.each(testCases)(
     "%s array and %s val -> %s",
