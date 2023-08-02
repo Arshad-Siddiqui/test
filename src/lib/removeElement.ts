@@ -1,6 +1,7 @@
-export function removeElement(array: number[], val: number): number {
-  const newArray = array.filter((element) => element != val);
-  const differenceInLength = array.length - newArray.length;
-  array.splice(0, array.length, ...newArray);
+export function removeElement(nums: number[], val: number): number {
+  const newArray = nums.filter((element) => element != val);
+  const differenceInLength = nums.length - newArray.length;
+  nums.length = 0;
+  nums.push(...newArray);
   return differenceInLength;
 }
