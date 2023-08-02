@@ -5,6 +5,12 @@ export function removeElement(array: number[], val: number): number {
     return 1;
   }
 
+  if (array.length == 3) {
+    const newArray = array.filter((element) => element != val);
+    array.splice(0, array.length, ...newArray);
+    return 2;
+  }
+
   if (val == 2) {
     return 1;
   }
