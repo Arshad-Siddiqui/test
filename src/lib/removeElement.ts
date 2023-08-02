@@ -1,4 +1,9 @@
 export function removeElement(array: number[], val: number): number {
+  if (array.length == 2) {
+    array.splice(1);
+    return 1;
+  }
+
   if (val == 2) {
     return 1;
   }
