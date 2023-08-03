@@ -36,7 +36,12 @@ describe("#removeDuplicates", () => {
   });
 
   describe("can remove duplicates", () => {
-    const testCases: TestCases = [[[1, 1], [1], 1]];
+    const testCases: TestCases = [
+      [[1, 1], [1], 1],
+      [[1, 1, 2], [1, 2], 1],
+      [[1, 2, 2, 3], [1, 2, 3], 1],
+      [[1, 1, 1, 1, 2, 3, 8], [1, 2, 3, 8], 3],
+    ];
 
     testEach(testCases);
   });
