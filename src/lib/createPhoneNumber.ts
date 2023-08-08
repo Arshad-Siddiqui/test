@@ -1,6 +1,6 @@
 export function createPhoneNumber(numbers: number[]): string {
-  const firstBlock = `(${numbers[0]}${numbers[1]}${numbers[2]})`;
-  const secondBlock = `${numbers[3]}${numbers[4]}${numbers[5]}`;
-  const thirdBlock = `${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
-  return firstBlock + " " + secondBlock + "-" + thirdBlock;
+  const firstBlock = numbers.slice(0, 3).join("");
+  const secondBlock = numbers.slice(3, 6).join("");
+  const thirdBlock = numbers.slice(6, 10).join("");
+  return `(${firstBlock}) ${secondBlock}-${thirdBlock}`;
 }
