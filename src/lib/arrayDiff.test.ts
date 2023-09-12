@@ -13,7 +13,7 @@ describe("arrayDiff", () => {
       ],
     ];
 
-    test.each(testCases)("%p", (a, b, expected) => {
+    test.each(testCases)("%s & %s -> %s", (a, b, expected) => {
       const result = arrayDiff(a, b);
       expect(result).toEqual(expected);
     });
